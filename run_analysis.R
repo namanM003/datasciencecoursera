@@ -43,4 +43,4 @@ tidyDataSet$activityLabel <- factor(tidyDataSet$activityLabel,labels = tolower(l
 
 ##############Create a final dataset by finding mean for each activity and subject#######
 final_output <- ddply(tidyDataSet, .(activityLabel, subjectId), numcolwise(mean))
-write.table(final_output, file="getting_and_cleaning_data_project.txt", sep = "\t", append=F)
+write.table(final_output, file="getting_and_cleaning_data_project.txt", sep = "\t", append=F, row.names = FALSE)
